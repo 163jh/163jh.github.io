@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.6.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.6.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.6.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.6.0" color="#222">
+
+
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '6.6.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="1.本周学习方向：CLion安装与配置 2.学习参考：CLion官网 3.总结：&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CLion是由捷克著名软件开发商JetBrains公司开发的专业 C/C++ IDE，以IntelliJ为基础设计，包含了许多智能功能来提高开发人员的生产力，提高开发人员的工作效率。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb">
+<meta property="og:type" content="article">
+<meta property="og:title" content="二学期第一次周报">
+<meta property="og:url" content="http://yoursite.com/2019/03/23/二学期第一次周报/index.html">
+<meta property="og:site_name" content="163jh">
+<meta property="og:description" content="1.本周学习方向：CLion安装与配置 2.学习参考：CLion官网 3.总结：&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CLion是由捷克著名软件开发商JetBrains公司开发的专业 C/C++ IDE，以IntelliJ为基础设计，包含了许多智能功能来提高开发人员的生产力，提高开发人员的工作效率。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-03-22T18:37:15.660Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="二学期第一次周报">
+<meta name="twitter:description" content="1.本周学习方向：CLion安装与配置 2.学习参考：CLion官网 3.总结：&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;CLion是由捷克著名软件开发商JetBrains公司开发的专业 C/C++ IDE，以IntelliJ为基础设计，包含了许多智能功能来提高开发人员的生产力，提高开发人员的工作效率。&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nb">
+
+
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/23/二学期第一次周报/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>二学期第一次周报 | 163jh</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion .logo-line-before i { left: initial; }
+    .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">163jh</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-schedule">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>日程表</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-sitemap">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/sitemap.xml" rel="section"><i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>站点地图</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-commonweal">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/404/" rel="section"><i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>公益 404</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/二学期第一次周报/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="163jh">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="163jh">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">二学期第一次周报
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-03-23 02:36:48 / 修改时间：02:37:15" itemprop="dateCreated datePublished" datetime="2019-03-23T02:36:48+08:00">2019-03-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-本周学习方向："><a href="#1-本周学习方向：" class="headerlink" title="1.本周学习方向："></a>1.本周学习方向：</h2><p>CLion安装与配置</p>
+<h2 id="2-学习参考："><a href="#2-学习参考：" class="headerlink" title="2.学习参考："></a>2.学习参考：</h2><p><a href="https://www.jetbrains.com/clion/" target="_blank" rel="noopener">CLion官网</a></p>
+<h2 id="3-总结："><a href="#3-总结：" class="headerlink" title="3.总结："></a>3.总结：</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CLion是由捷克著名软件开发商JetBrains公司开发的专业 C/C++ IDE，以IntelliJ为基础设计，包含了许多智能功能来提高开发人员的生产力，提高开发人员的工作效率。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我也是才开始使用这个IDE，但我一用上便已喜欢上了它，其优秀的智能提示和代码补全功能比之 VS 可谓有过之而无不及，并且还免去了 VS 臃肿的缺陷，可谓是 C/C++ 高效开发的利器。但就是在Windows下安装MinGW编译环境比较麻烦，但有一个便利的方法就是通过 Dev C++ 来快捷获得可用编译环境，只需将库和编译器的目录设置成 Dev C++ 的，便可达到快速搭建环境的目的。还有CLion官方原生只有英文版，但通过社区提供的汉化包能达到80%以上的汉化率，不影响使用。另外，CLion其实是收费的，但学生可以通过校园邮箱来申请教育账户来免费使用该软件。CLion 还有很多高级功能我还没有发现，我也希望大家也能享受到这一神器带来的好处。</p>
+<h2 id="4-LeetCode："><a href="#4-LeetCode：" class="headerlink" title="4.LeetCode："></a>4.LeetCode：</h2><p>4.1.验证回文字符串<br>之前做了很多次都失败了，具体的步骤我忘了，大致的是打算本地操作，把所有其他字符都给去掉，然后再判断回文，但因过于复杂，所以都失败了。不久前才想到可以建立一个新的字符数组，把原数组遍历后的合法字符提取过来再判断，终于成功了。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">char</span>* s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j = <span class="number">0</span>,k = <span class="number">1</span>,len = <span class="built_in">strlen</span>(s);</span><br><span class="line">    <span class="keyword">char</span> tmp[len + <span class="number">1</span>];</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">isalnum</span>(s[i]))</span><br><span class="line">        &#123;</span><br><span class="line">            tmp[j] = s[i];</span><br><span class="line">            j++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    tmp[j] = <span class="string">'\0'</span>;</span><br><span class="line">    j--;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; j;i++,j--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>((tmp[i] != tmp[j] &amp;&amp; tmp[i] != tmp[j] + <span class="number">32</span> &amp;&amp; tmp[i] != tmp[j] - <span class="number">32</span>) || <span class="built_in">isalpha</span>(tmp[i]) != <span class="built_in">isalpha</span>(tmp[j]))</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.2.最长公共前缀<br>我写的第一个较为完整的Java函数，因为之前用C一直没做出来，并且在学Java的过程中发现Java对字符串的才做更为灵活，才打算用Java做的。通过对substring方法的正确使用，做出来了。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> i,minlen,j,flag;</span><br><span class="line">        i = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(strs.length == <span class="number">0</span>)</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; strs.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(strs[i].length() == <span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">0</span>,minlen = strs[<span class="number">0</span>].length();i &lt; strs.length;i++)</span><br><span class="line">        &#123;</span><br><span class="line">            minlen = (minlen &lt; strs[i].length())? minlen : strs[i].length();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>,flag = <span class="number">0</span>;j &lt; minlen;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; strs.length - <span class="number">1</span>;i++)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span>(!(strs[i].charAt(j) == strs[i + <span class="number">1</span>].charAt(j)))</span><br><span class="line">                &#123;</span><br><span class="line">                    flag = <span class="number">1</span>;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span>(flag == <span class="number">1</span>)</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>].substring(<span class="number">0</span>,j);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.3.Fizz Buzz<br>之前因为对returnSize的真实意义理解有偏差，所以导致如此一个简单的题一直没通过。经过大佬指点明白了，但仍然认为returnSize有些多余，因为他完全可以在主函数中被赋值，完全不需要传到子函数中。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Return an array of size *returnSize.</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">char</span>** <span class="title">fizzBuzz</span><span class="params">(<span class="keyword">int</span> n, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">char</span> **a;</span><br><span class="line">        a = (<span class="keyword">char</span> **)<span class="built_in">malloc</span>(n * <span class="keyword">sizeof</span>(<span class="keyword">char</span> *));</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; n;i++)</span><br><span class="line">        a[i] = (<span class="keyword">char</span> *)<span class="built_in">malloc</span>(<span class="number">10</span> * <span class="keyword">sizeof</span>(<span class="keyword">char</span>));</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(i % <span class="number">15</span> == <span class="number">0</span>)</span><br><span class="line">            <span class="built_in">strcpy</span>(a[i - <span class="number">1</span>],<span class="string">"FizzBuzz"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span>)</span><br><span class="line">            <span class="built_in">strcpy</span>(a[i - <span class="number">1</span>],<span class="string">"Fizz"</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i % <span class="number">5</span> == <span class="number">0</span>)</span><br><span class="line">            <span class="built_in">strcpy</span>(a[i - <span class="number">1</span>],<span class="string">"Buzz"</span>);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="built_in">sprintf</span>(a[i - <span class="number">1</span>],<span class="string">"%d"</span>,i);</span><br><span class="line">    &#125;</span><br><span class="line">    *returnSize = n;</span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.4.删除链表中的节点<br>简单，只需把next指向next的next就行了。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(struct ListNode* node)</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">tmp</span>;</span></span><br><span class="line">    tmp = (struct ListNode *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct ListNode));</span><br><span class="line">    tmp = &amp;node;</span><br><span class="line">    (*node).val = (*(node -&gt; next)).val;</span><br><span class="line">    node -&gt; next = (node -&gt; next) -&gt; next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.5.删除链表的倒数第N个节点<br>自己写的实现始终是失败的，所以看了网上大佬的写法。这才令我明白了什么是双指针法，不，准确来说是三指针法。第一个指针用来将倒数转化为正数，第二、三个指针才用来删除指针，再考虑到特殊情况就通过了。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function">struct ListNode* <span class="title">removeNthFromEnd</span><span class="params">(struct ListNode* head, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">fp</span> = <span class="title">head</span>,*<span class="title">sp</span> = <span class="title">head</span>,*<span class="title">sq</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="keyword">for</span>(;n &gt; <span class="number">0</span>;n--)</span><br><span class="line">    &#123;</span><br><span class="line">        fp = fp -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(fp)</span><br><span class="line">    &#123;</span><br><span class="line">        sq = sp;</span><br><span class="line">        sp = sp -&gt; next;</span><br><span class="line">        fp = fp -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(sp == head)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> sp -&gt; next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        sq -&gt; next = sp -&gt; next;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>4.6.合并两个有序链表<br>看的网上的实现，通过递归，逐步将两个链表中的所有元素从小到大重新组合成一个新链表。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function">struct ListNode* <span class="title">mergeTwoLists</span><span class="params">(struct ListNode* l1, struct ListNode* l2)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(l1 == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> l2;</span><br><span class="line">    <span class="keyword">if</span>(l2 == <span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> l1;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">p</span> = <span class="title">NULL</span>;</span></span><br><span class="line">    <span class="keyword">if</span>(l1 -&gt; val &lt; l2 -&gt; val)</span><br><span class="line">    &#123;</span><br><span class="line">        p = l1;</span><br><span class="line">        p -&gt; next = mergeTwoLists(l1 -&gt; next,l2);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        p = l2;</span><br><span class="line">        p -&gt; next = mergeTwoLists(l1,l2 -&gt; next);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> p;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="5-下周进度："><a href="#5-下周进度：" class="headerlink" title="5.下周进度："></a>5.下周进度：</h2><p>研究数据结构。</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/20/寒假作业/" rel="next" title="寒假作业">
+                <i class="fa fa-chevron-left"></i> 寒假作业
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">163jh</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-本周学习方向："><span class="nav-number">1.</span> <span class="nav-text">1.本周学习方向：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-学习参考："><span class="nav-number">2.</span> <span class="nav-text">2.学习参考：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-总结："><span class="nav-number">3.</span> <span class="nav-text">3.总结：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-LeetCode："><span class="nav-number">4.</span> <span class="nav-text">4.LeetCode：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-下周进度："><span class="nav-number">5.</span> <span class="nav-text">5.下周进度：</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2018 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">163jh</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v6.6.0</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script src="/lib/three/canvas_lines.min.js"></script>
+  
+
+
+  
+
+
+  <script src="/js/src/utils.js?v=6.6.0"></script>
+
+  <script src="/js/src/motion.js?v=6.6.0"></script>
+
+
+
+  
+  
+
+  
+  <script src="/js/src/scrollspy.js?v=6.6.0"></script>
+<script src="/js/src/post-details.js?v=6.6.0"></script>
+
+
+
+  
+
+
+  <script src="/js/src/bootstrap.js?v=6.6.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
